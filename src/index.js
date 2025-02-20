@@ -5,6 +5,9 @@ import battleshipPNG from './assets/battleship.PNG';
 import todoPNG from './assets/todo.PNG';
 import weatherPNG from './assets/weather.PNG';
 import restaurantPNG from './assets/restaurant.PNG';
+import admindashboardPNG from './assets/admindashboard.PNG';
+import calculatorPNG from './assets/calculator.PNG';
+import landingpagePNG from './assets/landing-page.PNG';
 import { createProject } from './scripts/projects';
 import './style.css';
 
@@ -51,5 +54,35 @@ createProject({
   imageAlt: 'Weather forecast website preview',
   liveLink: 'https://bdelucia.github.io/odin-restaurant/',
   githubLink: 'https://github.com/bdelucia/odin-restaurant',
+  githubIcon: GitHubSVG,
+});
+
+createProject({
+  name: 'admindashboard',
+  title: 'Admin dashboard',
+  imageSrc: admindashboardPNG,
+  imageAlt: 'Admin Dashboard website preview',
+  liveLink: 'https://bdelucia.github.io/odin-admindashboard/',
+  githubLink: 'https://github.com/bdelucia/odin-admindashboard',
+  githubIcon: GitHubSVG,
+});
+
+createProject({
+  name: 'calculator',
+  title: 'Calculator',
+  imageSrc: calculatorPNG,
+  imageAlt: 'calculator website preview',
+  liveLink: 'https://bdelucia.github.io/odin-calculator/',
+  githubLink: 'https://github.com/bdelucia/odin-calculator',
+  githubIcon: GitHubSVG,
+});
+
+createProject({
+  name: 'landingpage',
+  title: 'Landing page',
+  imageSrc: landingpagePNG,
+  imageAlt: 'Landing page website preview',
+  liveLink: 'https://funfactusingchatgptapi.onrender.com/',
+  githubLink: 'https://github.com/bdelucia/BobbehLandingPage',
   githubIcon: GitHubSVG,
 });
