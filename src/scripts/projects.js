@@ -1,10 +1,11 @@
-export function createProject(config) {
-  // Expected config object structure:
+export default function createProject(config) {
+  // Updated config object structure:
   // {
   //   name: 'battleship',
   //   title: 'Bobbleship',
   //   imageSrc: battleshipPNG,
   //   imageAlt: 'Battleship website preview',
+  //   description: 'A browser-based Battleship game with AI opponent',
   //   liveLink: 'https://bdelucia.github.io/odin-battleship/',
   //   githubLink: 'https://github.com/bdelucia/odin-battleship',
   //   githubIcon: GitHubSVG
@@ -12,6 +13,12 @@ export function createProject(config) {
 
   // Get main project container
   const projectElement = document.getElementById(`${config.name}-project`);
+
+  // Create description overlay
+  const descriptionOverlay = document.createElement('div');
+  descriptionOverlay.classList.add('project-description-overlay');
+  descriptionOverlay.textContent = config.description;
+  projectElement.appendChild(descriptionOverlay);
 
   // Create and append image
   const imgElement = document.createElement('img');
@@ -35,6 +42,15 @@ export function createProject(config) {
   // Get text element
   const textElement = document.getElementById(`${config.name}-text`);
 
+  // Add hover events for description
+  projectElement.addEventListener('mouseenter', () => {
+    descriptionOverlay.classList.add('visible');
+  });
+
+  projectElement.addEventListener('mouseleave', () => {
+    descriptionOverlay.classList.remove('visible');
+  });
+
   // Add click event listeners
   textElement.addEventListener('click', () => {
     window.location.href = config.liveLink;
@@ -44,31 +60,3 @@ export function createProject(config) {
     window.location.href = config.githubLink;
   });
 }
-
-// const battleshipProjectElement = document.getElementById('battleship-project');
-
-// const battleshipImgElement = document.createElement('img');
-// battleshipImgElement.src = battleshipPNG;
-// battleshipImgElement.classList = 'project-image';
-// battleshipImgElement.id = 'battleship-image';
-// battleshipImgElement.alt = 'Battleship website preview';
-// battleshipProjectElement.prepend(battleshipImgElement);
-
-// const battleshipLabelElement = document.getElementById('battleship-label');
-
-// const battleshipGitHubLink = document.createElement('img');
-// battleshipGitHubLink.src = GitHubSVG;
-// battleshipGitHubLink.alt = 'Link to Bobbleship GitHub repo';
-// battleshipGitHubLink.id = 'battleship-gh-icon';
-// battleshipGitHubLink.classList = 'icon';
-// battleshipLabelElement.append(battleshipGitHubLink);
-
-// const battleshipTextElement = document.getElementById('battleship-text');
-
-// battleshipTextElement.addEventListener('click', () => {
-//   window.location.href = 'https://bdelucia.github.io/odin-battleship/';
-// });
-
-// battleshipGitHubLink.addEventListener('click', () => {
-//   window.location.href = 'https://github.com/bdelucia/odin-battleship';
-// });
