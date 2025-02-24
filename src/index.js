@@ -9,6 +9,8 @@ import admindashboardPNG from './assets/admindashboard.PNG';
 import calculatorPNG from './assets/calculator.PNG';
 import landingpagePNG from './assets/landing-page.PNG';
 import petsJPG from './assets/pets.jpg';
+import phoneSVG from './assets/phone.svg';
+import emailSVG from './assets/email.svg';
 import createProject from './scripts/projects.js'
 import './style.css';
 
@@ -108,3 +110,20 @@ petsImgElement.alt = 'Image of our pets Poppy and Biscuit';
 petsImgElement.id = 'footer-img';
 const footerImgElement = document.getElementById('footer-img');
 footerImgElement.appendChild(petsImgElement);
+
+const phoneImgElement = document.createElement('img');
+const emailImgElement = document.createElement('img');
+const linkedInImgElement = document.createElement('img');
+const footerGHImgElement = document.createElement('img');
+const phoneContainer = document.querySelector('.phone-container');
+const emailContainer = document.querySelector('.email-container');
+phoneImgElement.src = phoneSVG;
+emailImgElement.src = emailSVG;
+linkedInImgElement.src = LinkedInSVG;
+footerGHImgElement.src = GitHubSVG;
+phoneImgElement.id = 'phone-icon';
+emailImgElement.id = 'email-icon';
+footerGHImgElement.id = 'footer-gh-icon';
+
+phoneContainer.prepend(phoneImgElement);
+emailContainer.prepend(emailImgElement);
