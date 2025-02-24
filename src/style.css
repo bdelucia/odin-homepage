@@ -272,8 +272,7 @@ body {
   .header-text-container {
     margin: 40px;
     background-color: white;
-    min-height: 400px;
-    max-height: fit-content;
+    min-height: 200px;
   }
 
   #header-name {
@@ -302,5 +301,21 @@ body {
 
   #footer-img {
     width: 200px;
+  }
+}
+
+@media (max-width: 500px){
+  #header-text {
+    font-size: 1.3rem;
+  }
+  #footer-img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 400px){
+  .project {
+    transform: scale(0.8);
+    position: relative;
   }
 }
