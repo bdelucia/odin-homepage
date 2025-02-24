@@ -124,6 +124,19 @@ footerGHImgElement.src = GitHubSVG;
 phoneImgElement.id = 'phone-icon';
 emailImgElement.id = 'email-icon';
 footerGHImgElement.id = 'footer-gh-icon';
-
+  
 phoneContainer.prepend(phoneImgElement);
 emailContainer.prepend(emailImgElement);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const headerText = document.getElementById('header-text');
+  
+  headerText.animate([
+    { opacity: 0 },
+    { opacity: 1 }
+  ], {
+    duration: 1000,
+    fill: 'forwards',
+    delay: 0
+  });
+});
