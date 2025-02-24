@@ -41,6 +41,7 @@ export default function createProject(config) {
 
   // Get text element
   const textElement = document.getElementById(`${config.name}-text`);
+  textElement.classList.add('hoverable-text');
 
   // Add hover events for description
   projectElement.addEventListener('mouseenter', () => {
