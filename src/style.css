@@ -132,7 +132,6 @@ body {
   background-color: #000000;
   color: #f6f5f4;
   width: 100vw;
-  padding: 20px 0;
   text-align: center;
   position: relative;
   left: 50%;
@@ -140,10 +139,11 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: auto;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #footer-img {
@@ -253,6 +253,7 @@ body {
   #header-name {
     font-size: 2rem;
   }
+
   body {
     margin: 20px 20px 0 20px;
     background-color: gray;
@@ -260,5 +261,20 @@ body {
 
   .projects-container {
     grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    gap: 40px;
+  }
+  #contact-me {
+    font-size: 1.4rem;
+  }
+    
+  .left-footer {
+    font-size: 0.8rem;
+  }
+
+  #footer-img {
+    width: 200px;
   }
 }
